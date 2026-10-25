@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>本地 PDF 工具箱</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-logo">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h8l4 4v16H6z"/><path d="M14 2v4h4"/><path d="M9 12h6M9 16h6"/></svg>
+      </span>
+      <span class="brand-name">本地 PDF 工具箱</span>
+      <span class="brand-tag">离线 · 本地处理</span>
+    </div>
+    <nav class="tabs" id="categoryTabs">
+      <button class="tab active" data-view="home">全部工具</button>
+      <button class="tab" data-view="cat-convert">转换</button>
+      <button class="tab" data-view="cat-pages">页面操作</button>
+      <button class="tab" data-view="cat-security">安全保护</button>
+      <button class="tab" data-view="cat-edit">编辑</button>
+      <button class="tab" data-view="cat-text">文本 & OCR</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- 首页：工具卡片总览 -->
+  <section id="view-home" class="view active">
+    <p class="intro">所有文件都在你的浏览器里本地处理，不会上传到任何服务器。选择工具即可开始。</p>
+    <div id="toolGrid" class="grid"></div>
+  </section>
+
+  <!-- 分类视图 -->
+  <section id="view-cat-convert" class="view"><h2 class="cat-title">转换</h2><div id="grid-convert" class="grid"></div></section>
+  <section id="view-cat-pages" class="view"><h2 class="cat-title">页面操作</h2><div id="grid-pages" class="grid"></div></section>
+  <section id="view-cat-security" class="view"><h2 class="cat-title">安全保护</h2><div id="grid-security" class="grid"></div></section>
+  <section id="view-cat-edit" class="view"><h2 class="cat-title">编辑</h2><div id="grid-edit" class="grid"></div></section>
+  <section id="view-cat-text" class="view"><h2 class="cat-title">文本 & OCR</h2><div id="grid-text" class="grid"></div></section>
+
+  <!-- 各工具工作面板（动态） -->
+  <section id="toolPanel" class="view tool-panel" style="display:none;">
+    <button class="back-btn" id="backBtn">← 返回工具列表</button>
+    <div id="toolBody"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>本地离线版本 · 数据不离开你的电脑 · 依赖库已全部内置于 libs/ 目录</p>
+</footer>
+
+<script src="libs/pdf-lib.min.js"></script>
+<script src="libs/fontkit.min.js"></script>
+<script src="libs/pdf.min.js"></script>
+<script src="libs/tesseract/tesseract.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
