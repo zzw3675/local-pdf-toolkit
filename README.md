@@ -10,6 +10,18 @@ Demo 是完整可用的版本（通过 GitHub Pages 托管）：所有 PDF 处�
 
 > 若公司内网屏蔽外网域名，可在本地运行：下载本仓库后双击 `start.bat`，通过 `http://127.0.0.1:8642/` 访问（完全离线，不走外网）。
 
+## 快捷安装（命令行）
+
+一条命令下载并启动（需要电脑装有 Node.js 18+ 或 Python 3）：
+
+```bash
+git clone https://github.com/zzw3675/local-pdf-toolkit.git
+cd local-pdf-toolkit
+node server.js            # 或 python3 -m http.server 8642 --bind 127.0.0.1
+```
+
+然后浏览器访问 `http://127.0.0.1:8642/` 即可使用全部 26 个工具（完全离线，数据不出本机）。
+
 ## 怎么启动
 
 ### Windows
